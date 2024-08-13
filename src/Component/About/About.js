@@ -33,14 +33,14 @@ const About = () => {
     <BodySection id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        Hello! I'm Andreson, a full stack developer based in Charlotte, NC, with
-        a focus on the MERN stack. Over the past three years, I've enhanced my
-        skills in web development, and I'm currently diving deeper into
+        Hello! I&rsquo;m Andreson, a full stack developer based in Charlotte, NC, with
+        a focus on the MERN stack. Over the past three years, I&rsquo;ve enhanced my
+        skills in web development, and I&rsquo;m currently diving deeper into
         PostgreSQL and Docker . As I continue to build my expertise in my
-        preferred technologies, I'm eager to expand my knowledge into Java, with
+        preferred technologies, I&rsquo;m eager to expand my knowledge into Java, with
         plans to explore Python in the future. Beyond coding, I have a passion
         for staying active 🏋️‍♂️ and value quality time with family and friends 👨‍👩‍👧‍👦.
-        I'm currently seeking new opportunities to leverage my skills and
+        I&rsquo;m currently seeking new opportunities to leverage my skills and
         contribute to a dynamic team.
       </SectionText>
 
