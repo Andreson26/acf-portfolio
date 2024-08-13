@@ -1,95 +1,62 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { useState, useEffect } from "react";
+import Loader from "@/Component/Loader/Loader";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "@/theme/theme";
+import { GlobalStyles } from "@/styles/GlobalStyles";
+import Header from "@/Component/Header/Header";
+import RootLayout from "./layout";
+import { BodySection } from "@/styles";
+import Hero from "@/Component/Home/Home";
+import BackgroundAnimation from "@/Component/backgroundAnimation/BackgroundAnimation";
+import About from "@/Component/About/About";
+import Projects from "@/Component/Projects/Projects";
+import Technologies from "@/Component/Tech/Tech";
+import Footer from "@/Component/Footer/Footer";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("isDarkTheme") === "true";
+    setIsDarkTheme(savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkTheme((prevTheme) => {
+      const newTheme = !prevTheme;
+      localStorage.setItem("isDarkTheme", newTheme);
+      console.log(newTheme);
+      return newTheme;
+    });
+  };
+
+  const currentTheme = isDarkTheme ? darkTheme : lightTheme;
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <ThemeProvider theme={currentTheme}>
+      <GlobalStyles />
+      <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+      <RootLayout>
+        <BodySection grid>
+          <Hero />
+          <BackgroundAnimation />
+        </BodySection>
+        <About />
+        <Projects />
+        <Technologies />
+      </RootLayout>
+      <Footer />
+    </ThemeProvider>
   );
 }
