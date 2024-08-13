@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <FooterContainer>
       <FooterLinks>
-        <FooterLink href="path/to/resume.pdf" target="_blank">
+        <FooterLink href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           <FaFileAlt /> Resume
         </FooterLink>
         <FooterLink href="mailto:your.andresonceide26@gmail.com">
