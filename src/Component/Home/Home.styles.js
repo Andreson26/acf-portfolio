@@ -40,6 +40,13 @@ export const ImageContainer = styled.div`
   background: ${(props) => props.theme.colors.gradient};
   border-radius: 50%;
   overflow: hidden;
+  border: 1px solid white;
+
+  @media only screen and (max-width: 768px) {
+  width: 30vh;
+  height: 30vh;
+    
+}
 `;
 export const Img = styled(Image)`
   object-fit: cover;
@@ -51,6 +58,7 @@ export const Title = styled.p`
   @media only screen and (min-width: 940px) {
     font-size: 4rem;
     text-align: left;
+}
 `;
 
 export const SpanName = styled.span`
