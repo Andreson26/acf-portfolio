@@ -1,37 +1,27 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
+import Link from 'next/link';
 
-const Page = () => {
+const posts = [
+  { title: 'First Post', slug: 'first-post' },
+  { title: 'Second Post', slug: 'second-post' },
+  // ... other posts
+];
+
+export default function BlogPage() {
   return (
-    <>
-      <Head>
-        <title>Blog - My Website</title>
-        <meta name="description" content="My blog page" />
-      </Head>
-      <div>
-        <h1>Blog</h1>
-        <p>Welcome to my blog page! we will be posting content very soon!!!</p>
-        {/* Add your blog content here */}
-        <Link href="/">
-          <p
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              marginTop: "20px",
-              backgroundColor: "#0070f3",
-              color: "white",
-              textAlign: "center",
-              textDecoration: "none",
-              borderRadius: "5px",
-            }}
-          >
-            Back to my portfolio
-          </p>
-        </Link>
-      </div>
-    </>
+    <div>
+      <h1>Blog Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <h2>{post.title}</h2>
+            <Link href={`/blog/${post.slug}`}>
+              <button>Read More</button>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
   );
-};
+}
 
-export default Page;
