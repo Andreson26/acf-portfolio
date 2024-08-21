@@ -1,3 +1,4 @@
+"use client"
 import styled from "styled-components";
 
 export const BodySection = styled.section`
@@ -96,3 +97,27 @@ export const SectionText = styled.p`
     padding-bottom: 16px;
   }
 `;
+
+export const Container = styled.html`
+  width: 100%;
+  margin: auto;
+`;
+
+export const BlogContainer = styled.div`
+  
+`
+
+export const ContentContainer = styled.div`
+padding-top: 120px;
+border: 1px solid black;
+color: red;
+`
+export const BlogsPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  border: 1px solid black;
+
+`
+

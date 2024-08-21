@@ -1,4 +1,4 @@
-import { Container } from "./layoutStyles";
+import { Container } from "@/styles";
 
 export default function RootLayout({ children }) {
   return (

@@ -9,14 +9,11 @@ export const NavbarContainer = styled.nav`
       ? props.theme.colors.background
       : props.theme.colors.navbarBackground};
   box-shadow: ${(props) => props.theme.colors.borderShadow};
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  align-items: center;
   justify-content: space-between;
-  height: 80px;
   padding: 0 20px;
   transition: background-color 0.3s ease-in-out;
 
@@ -63,7 +60,7 @@ export const NavbarLink = styled(Link)`
   font-size: 16px;
   transition: background-color 0.4s ease;
   text-decoration: none;
-  padding: 1px 15px; /* Consistent padding */
+  padding: 1px 15px; 
   border-radius: 10px;
   margin-left: ${(props) => (props.noHover ? "40px" : "0")};
 
@@ -75,11 +72,10 @@ export const NavbarLink = styled(Link)`
 
   &.active {
     background-color: ${(props) => props.theme.colors.activeBackground};
-    /* Ensure padding or margin doesn't change */
   }
 
   &:focus {
-    outline: none; /* Avoid outline changing layout */
+    outline: none;
   }
 
   @media (max-width: 768px) {

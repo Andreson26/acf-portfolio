@@ -1,3 +1,5 @@
+'use client';
+import BlogLayout from './layout';
 import Link from 'next/link';
 
 const posts = [
@@ -21,7 +23,7 @@ export default function BlogPage() {
         ))}
       </ul>
     </div>
-    
   );
 }
+
 

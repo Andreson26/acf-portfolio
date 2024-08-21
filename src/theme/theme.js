@@ -17,6 +17,7 @@ export const darkTheme = {
     sectionTitle: "linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%)",
     baseColor: colors[0],
     tagColor:"#d8bfbf",
+    borderColor: "#141414",
   },
   breakpoints: {
     sm: "screen and (max-width: 640px)",
@@ -42,6 +43,7 @@ export const lightTheme = {
     sectionTitle: "linear-gradient(121.57deg, #8C8C8C 18.77%, #6E6E6E 60.15%)",
     baseColor: colors[0],
     tagColor:  "#6c757d",
+    borderColor: "#ebebeb",
   },
   breakpoints: {
     sm: "screen and (max-width: 640px)",

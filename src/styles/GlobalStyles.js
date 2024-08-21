@@ -39,6 +39,4 @@ body.navbar-extended {
   margin-top: 200px; 
 }
 
-
-
 `;
