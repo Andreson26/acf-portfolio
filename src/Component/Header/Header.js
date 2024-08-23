@@ -53,7 +53,7 @@ function Header({ toggleTheme, isDarkTheme }) {
           <RightContainer>
             <NavbarLinkContainer>
               <NavbarLink
-                activeClass="active"
+                activeclass="active"
                 to="hero"
                 spy={true}
                 smooth={true}

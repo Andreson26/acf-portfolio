@@ -18,25 +18,6 @@ export const info = {
     },
   ],
 
-  hobbies: [
-    {
-      label: "reading",
-      emoji: "📖",
-    },
-    {
-      label: "theater",
-      emoji: "🎭",
-    },
-    {
-      label: "movies",
-      emoji: "🎥",
-    },
-    {
-      label: "cooking",
-      emoji: "🌶",
-    },
-  ],
-
   timeLineData: [
     {
       year: 2021,

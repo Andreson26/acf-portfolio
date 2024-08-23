@@ -27,7 +27,6 @@ export default function Home() {
     setIsDarkTheme((prevTheme) => {
       const newTheme = !prevTheme;
       localStorage.setItem("isDarkTheme", newTheme);
-      console.log(newTheme);
       return newTheme;
     });
   };

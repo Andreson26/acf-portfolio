@@ -1,28 +1,24 @@
 'use client';
-import BlogLayout from './layout';
-import Link from 'next/link';
-
-const posts = [
-  { title: 'First Post', slug: 'first-post' },
-  { title: 'Second Post', slug: 'second-post' },
-  // ... other posts
-];
+import { BlogsPageContainer, BlogsTitle, PageInnerContainer } from '@/styles';
+import Blogs from '@/Component/Blogs/Blogs';
 
 export default function BlogPage() {
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <h2>{post.title}</h2>
-            <Link href={`/blog/${post.slug}`}>
-              <button>Read More</button>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <BlogsPageContainer>
+      <BlogsTitle>Designing for the Future: <span>Web Development Trends to read</span></BlogsTitle>
+      <PageInnerContainer>
+        <Blogs />
+
+        <div style={{ flex: "2", display:"flex", flexDirection: "column", alignItems: "center",}}>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+        </div>
+      </PageInnerContainer>
+    </BlogsPageContainer>
   );
 }
 

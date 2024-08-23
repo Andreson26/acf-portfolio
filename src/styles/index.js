@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styled from "styled-components";
 
 export const BodySection = styled.section`
@@ -103,21 +103,27 @@ export const Container = styled.html`
   margin: auto;
 `;
 
-export const BlogContainer = styled.div`
-  
-`
+export const BlogContainer = styled.html`
+  width: 100%;
+  margin: auto;
+`;
 
-export const ContentContainer = styled.div`
-padding-top: 120px;
-border: 1px solid black;
-color: red;
-`
 export const BlogsPageContainer = styled.div`
+  margin: 50px 130px;
+  box-shadow: ${(props) => props.theme.colors.rightShadow};
+`;
+
+export const BlogsTitle = styled.h1`
+  background: ${(props) => props.theme.colors.sectionTitle};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  span {
+    font-size: 22px;
+    font-weight: 600;
+  }
+`;
+
+export const PageInnerContainer = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px auto;
-  border: 1px solid black;
-
-`
-
+`;
