@@ -36,7 +36,7 @@ export default function BlogLayout({ children }) {
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
       <BlogHeader toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-      <BlogBanner isDarkTheme={isDarkTheme} />
+      {/*<BlogBanner isDarkTheme={isDarkTheme} />*/}
       <div>{children}</div>
       <BlogFooter />
     </ThemeProvider>

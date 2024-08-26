@@ -2,26 +2,36 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
+export const BlogsContainer = styled.div`
+  flex: 0 0 80%;
+`;
+
 export const ListContainer = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 export const List = styled.li`
-  width: 380px;
+  width: 350px;
 `;
-
 export const ImageContainer = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.navbarBackground};
-  height: 220px;
-  border-radius: 20px;
-`;
-
-export const Img = styled(Image)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 200px;
+  border-radius: 10%;
+  overflow: hidden;
+  background-color: ${(props) => props.theme.colors.navbarBackground};
+  box-shadow: ${(props) => props.theme.colors.borderShadow};
+
+  @media only screen and (max-width: 768px) {
+  }
+`;
+export const Img = styled(Image)`
   object-fit: cover;
+  width: auto;
+  height: auto;
 `;
 
 export const TitleContainer = styled.div`

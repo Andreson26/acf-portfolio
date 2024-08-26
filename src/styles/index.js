@@ -110,7 +110,11 @@ export const BlogContainer = styled.html`
 
 export const BlogsPageContainer = styled.div`
   margin: 50px 130px;
-  box-shadow: ${(props) => props.theme.colors.rightShadow};
+  box-shadow: ${(props) =>  props.noshadow ? "none" : props.theme.colors.rightShadow};
+  
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin: 50px;
+  }
 `;
 
 export const BlogsTitle = styled.h1`
@@ -126,4 +130,8 @@ export const BlogsTitle = styled.h1`
 export const PageInnerContainer = styled.div`
   width: 100%;
   display: flex;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    flex-direction: column;
+  }
 `;

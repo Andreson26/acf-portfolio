@@ -49,6 +49,8 @@ export const ImageContainer = styled.div`
 `;
 export const Img = styled(Image)`
   object-fit: cover;
+  width: auto,
+  height: auto;
 `;
 export const Title = styled.p`
   font-size: 3rem;
