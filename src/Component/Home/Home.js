@@ -19,7 +19,7 @@ export default function Home(props) {
       <ProfileContainer>
         <ImageContainer>
           <Img
-            src="/img/black_white-portrait.png"
+            src="/img/portrait-review.jpg"
             alt="Portrait"
             width={300}
             height={250}

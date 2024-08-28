@@ -13,6 +13,7 @@ import About from "@/Component/About/About";
 import Projects from "@/Component/Projects/Projects";
 import Technologies from "@/Component/Tech/Tech";
 import Footer from "@/Component/Footer/Footer";
+import ScrollToTopButton from "@/Component/ScrollToTopButton/ScrollToTopButton";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -55,6 +56,7 @@ export default function Home() {
         <Projects />
         <Technologies />
       </RootLayout>
+      <ScrollToTopButton />
       <Footer />
     </ThemeProvider>
   );

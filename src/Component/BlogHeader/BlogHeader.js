@@ -18,48 +18,26 @@ import {
 
 function BlogHeader({ toggleTheme, isDarkTheme }) {
   const [extendNavbar, setExtendNavbar] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  /*useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-
-    const handleBodyClass = () => {
-      if (extendNavbar) {
-        document.body.classList.add("navbar-extended");
-      } else {
-        document.body.classList.remove("navbar-extended");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleBodyClass();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [extendNavbar]);*/
 
   return (
     <BlogHeaderContainer>
       <BlogNav>
         <ImageContainer>
           <Link href="/">
-          <BlogLogo
-            src="/img/acf-logo.png"
-            alt="logo"
-            width={100}
-            height={100}
-          /></Link>
-    
+            <BlogLogo
+              src="/img/acf-logo.png"
+              alt="logo"
+              width={100}
+              height={100}
+            />
+          </Link>
         </ImageContainer>
         <LinksContainer>
           <NavBlogLinks href="/" activeclass="active">
             Home
           </NavBlogLinks>
           <ToggleContainer>
-          <ThemeToggler toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+            <ThemeToggler toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
           </ToggleContainer>
           <BlogOpenLinksButton onClick={() => setExtendNavbar(!extendNavbar)}>
             {extendNavbar ? (
@@ -71,9 +49,7 @@ function BlogHeader({ toggleTheme, isDarkTheme }) {
         </LinksContainer>
       </BlogNav>
       <BlogExtendedNavbar extendnavbar={extendNavbar}>
-        <ExtendedNavBlogLinks href='/'>
-            Home
-        </ExtendedNavBlogLinks>
+        <ExtendedNavBlogLinks href="/">Home</ExtendedNavBlogLinks>
         <ToggleContainer display>
           <ThemeToggler toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         </ToggleContainer>

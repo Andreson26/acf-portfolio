@@ -34,8 +34,8 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vh;
-  height: 40vh;
+  width: 38vh;
+  height: 38vh;
   padding-top: 30px;
   background: ${(props) => props.theme.colors.gradient};
   border-radius: 50%;
