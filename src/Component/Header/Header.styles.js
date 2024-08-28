@@ -45,7 +45,7 @@ export const NavbarInnerContainer = styled.div`
   margin: 0;
 
   @media (max-width: 768px) {
-    padding: 0 10px;
+    padding: 20px;
   }
 `;
 

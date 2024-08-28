@@ -11,6 +11,12 @@ export const BlogContent = styled.div`
     order: 2;
     margin: 30px 0;
   }
+    h4 {
+     @media ${(props) => props.theme.breakpoints.sm} {
+     font-size: 14px;
+     text-align: center;
+     }
+    }
 `;
 
 export const BlogImageContainer = styled.div`

@@ -110,10 +110,12 @@ export const BlogContainer = styled.html`
 
 export const BlogsPageContainer = styled.div`
   margin: 50px 130px;
-  box-shadow: ${(props) =>  props.noshadow ? "none" : props.theme.colors.rightShadow};
-  
+  box-shadow: ${(props) =>
+    props.noshadow ? "none" : props.theme.colors.rightShadow};
+
   @media ${(props) => props.theme.breakpoints.md} {
-    margin: 50px;
+    margin: 50px 20px;
+    box-shadow: none;
   }
 `;
 
@@ -124,6 +126,18 @@ export const BlogsTitle = styled.h1`
   span {
     font-size: 22px;
     font-weight: 600;
+    @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 18px;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    text-align: center;
+    margin: 50px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+  margin: 50px 0px;
+  font-size: 22px;
   }
 `;
 
