@@ -12,7 +12,7 @@ export default function BlogPage() {
       </BlogsTitle>
       <PageInnerContainer>
         <BlogList posts={blogData}/>
-        <Tags />
+        <Tags blogData={blogData}/>
       </PageInnerContainer>
     </BlogsPageContainer>
   );

@@ -144,7 +144,6 @@ export const BlogsTitle = styled.h1`
 export const PageInnerContainer = styled.div`
   width: 100%;
   display: flex;
-
   @media ${(props) => props.theme.breakpoints.md} {
     flex-direction: column;
   }

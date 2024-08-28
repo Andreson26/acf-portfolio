@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import { blogData } from "@/data/blogData";
 import {
   TagList,
   TagsList,
@@ -9,7 +7,7 @@ import {
   LinkList,
 } from "./Tags.styles";
 
-export default function Tags() {
+export default function Tags({ blogData} ) {
   return (
     <TagsSectionContainer>
       <TagTitle>Tags for Recent Posts</TagTitle>

@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import BlogButton from "../BlogButton/BlogButton";
 import {
   BlogContent,
   BlogImage,
@@ -9,6 +9,7 @@ import {
   AuthorSection,
   ContentContainer,
   SubContent,
+  Description,
 } from "./BlogPost.styles";
 
 export default function BlogPost({ post }) {
@@ -23,7 +24,7 @@ export default function BlogPost({ post }) {
         <AuthorSection>
           by {post.author} | <span>{post.date}</span>
         </AuthorSection>
-        <p>{post.description}... </p>
+        <Description>{post.description} </Description>
 
         {post.contents.map((section, index) => (
           <Content key={index}>
@@ -45,9 +46,7 @@ export default function BlogPost({ post }) {
           </Content>
         ))}
       </ContentContainer>
-      <Link href="/blog">
-        <button>Back to Blog</button>
-      </Link>
+      <BlogButton />
     </BlogContent>
   );
 }

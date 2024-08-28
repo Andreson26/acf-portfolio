@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export const BlogContent = styled.div`
   flex: 0 0 75%;
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   @media ${(props) => props.theme.breakpoints.md} {
     order: 2;
     margin: 30px 0;
@@ -40,6 +41,11 @@ export const BlogImage = styled(Image)`
 
 export const ContentContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.md} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
   }
 `;
 
@@ -52,8 +58,15 @@ export const AuthorSection = styled.p`
   margin: 10px;
 `;
 
+export const Description = styled.p`
+
+`
+
 export const Content = styled.div`
   margin: 20px;
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin: 20px 0;
+  }
 `;
 export const SubContent = styled.div`
   margin: 15px 0;

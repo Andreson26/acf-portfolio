@@ -1,7 +1,7 @@
 "use client";
-import Tags from "@/Component/Tags/Tags";
 import { BlogsPageContainer, PageInnerContainer } from "@/styles";
 import BlogPost from "@/Component/BlogPost/BlogPost";
+import Tag from "@/Component/Tag/Tag";
 import { blogData } from "@/data/blogData";
 
 export default function BlogPostPage({ params }) {
@@ -18,7 +18,7 @@ export default function BlogPostPage({ params }) {
     <BlogsPageContainer noshadow>
       <PageInnerContainer>
         <BlogPost post={post} />
-        <Tags />
+        <Tag post={post} />
       </PageInnerContainer>
     </BlogsPageContainer>
   );
