@@ -18,7 +18,6 @@ export default function Tag({ post }) {
             </LinkTag>
           </BlogTag>
         ))}
-        <BlogButton tags />
       </BlogTags >
     </BlogTagsContainer>
   );

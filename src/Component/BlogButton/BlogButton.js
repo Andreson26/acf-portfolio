@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function BlogButton() {
-  return <ButtonLink href="/blog">Back to Blogs</ButtonLink>;
+export default function BlogButton({blog}) {
+  return <ButtonLink blog href="/blog">Back to Blogs</ButtonLink>;
 }
 
 const ButtonLink = styled(Link)`
@@ -19,4 +19,9 @@ const ButtonLink = styled(Link)`
   &:hover {
     background: #801414;
   }
+
+  @media ${props => props.theme.breakpoints.md} {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  } 
 `;
