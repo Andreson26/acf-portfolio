@@ -66,7 +66,7 @@ export const NavbarLink = styled(Link)`
 
   &:hover {
     background-color: ${(props) =>
-      props.noHover ? "transparent" : props.theme.colors.hoverBackground};
+      props.nohover ? "transparent" : props.theme.colors.hoverBackground};
     cursor: pointer;
   }
 

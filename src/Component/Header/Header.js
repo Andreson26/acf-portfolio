@@ -73,7 +73,7 @@ function Header({ toggleTheme, isDarkTheme }) {
               <Link href="/blog" passHref>
                 <BlogLink>Blog</BlogLink>
               </Link>
-              <NavbarLink noHover>
+              <NavbarLink nohover>
                 <ThemeToggler
                   toggleTheme={toggleTheme}
                   isDarkTheme={isDarkTheme}
@@ -119,7 +119,7 @@ function Header({ toggleTheme, isDarkTheme }) {
           </BlogLinkExtended>
         </Link>
 
-        <NavbarLinkExtended noHover>
+        <NavbarLinkExtended nohover>
           <ThemeToggler toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         </NavbarLinkExtended>
       </NavbarExtendedContainer>

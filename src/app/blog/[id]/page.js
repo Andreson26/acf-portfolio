@@ -15,7 +15,7 @@ export default function BlogPostPage({ params }) {
   }
 
   return (
-    <BlogsPageContainer noshadow>
+    <BlogsPageContainer noshadow="true">
       <PageInnerContainer>
         <BlogPost post={post} />
         <Tag post={post} />

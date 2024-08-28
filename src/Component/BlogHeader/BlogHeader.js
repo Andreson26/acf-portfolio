@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
 import { RxCross2 } from "react-icons/rx";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
@@ -44,15 +45,17 @@ function BlogHeader({ toggleTheme, isDarkTheme }) {
     <BlogHeaderContainer>
       <BlogNav>
         <ImageContainer>
+          <Link href="/">
           <BlogLogo
             src="/img/acf-logo.png"
             alt="logo"
             width={100}
             height={100}
-          />
+          /></Link>
+    
         </ImageContainer>
         <LinksContainer>
-          <NavBlogLinks href="/" activeClass="active">
+          <NavBlogLinks href="/" activeclass="active">
             Home
           </NavBlogLinks>
           <ToggleContainer>
@@ -67,7 +70,7 @@ function BlogHeader({ toggleTheme, isDarkTheme }) {
           </BlogOpenLinksButton>
         </LinksContainer>
       </BlogNav>
-      <BlogExtendedNavbar extendNavbar={extendNavbar}>
+      <BlogExtendedNavbar extendnavbar={extendNavbar}>
         <ExtendedNavBlogLinks href='/'>
             Home
         </ExtendedNavBlogLinks>

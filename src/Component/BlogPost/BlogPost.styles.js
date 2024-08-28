@@ -69,5 +69,13 @@ export const Content = styled.div`
   }
 `;
 export const SubContent = styled.div`
-  margin: 15px 0;
+  margin: 15px 10px;
+
+  @media ${props => props.theme.breakpoints.md} {
+    display: flex;
+    flex-direction: column;
+    align-items; center;
+    justify-content: center;
+
+  }
 `;

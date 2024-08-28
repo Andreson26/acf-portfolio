@@ -88,7 +88,7 @@ export const BlogOpenLinksButton = styled.button`
 `;
 
 export const BlogExtendedNavbar = styled.div`
-  display: ${(props) => (props.extendNavbar ? "flex" : "none")};
+  display: ${(props) => (props.extendnavbar ? "flex" : "none")};
   flex-direction: column;
   gap: 30px;
   background-color: ${(props) => props.theme.colors.navbarBackground};

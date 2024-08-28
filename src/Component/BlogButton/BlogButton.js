@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export default function BlogButton({blog}) {
-  return <ButtonLink blog href="/blog">Back to Blogs</ButtonLink>;
+  return <ButtonLink href="/blog">Back to Blogs</ButtonLink>;
 }
 
 const ButtonLink = styled(Link)`
