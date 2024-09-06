@@ -115,10 +115,10 @@ export const BlogLink = styled.p`
 export const NavbarLinkExtended = styled(Link)`
   line-height: 32px;
   color: ${(props) => props.theme.colors.text};
-  font-size: 16px;
+  font-size: 20px;
   transition: background-color 0.4s ease;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 20px;
   margin-top: ${(props) => (props.noHover ? "20px" : "none")};
 
   &:hover {
@@ -166,7 +166,7 @@ export const OpenLinksButton = styled.button`
 `;
 
 export const NavbarExtendedContainer = styled.div`
-  display: ${(props) => (props.extendNavbar ? "flex" : "none")};
+  display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.colors.navbarBackground};
   position: fixed;
@@ -174,7 +174,8 @@ export const NavbarExtendedContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  transition: opacity 0.4s ease;
+  transform: ${(props) => (props.extendNavbar ? "translateX(0)" : "translateX(-100%)")};
+  transition: transform 0.4s ease-in-out;
   z-index: 1000;
 
   @media (min-width: 768px) {

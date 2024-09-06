@@ -36,14 +36,13 @@ export const ImageContainer = styled.div`
   justify-content: center;
   width: 38vh;
   height: 38vh;
-  padding-top: 30px;
   background: ${(props) => props.theme.colors.gradient};
   border-radius: 50%;
   overflow: hidden;
 
   @media only screen and (max-width: 768px) {
-  width: 30vh;
-  height: 30vh;
+  width: 26vh;
+  height: 26vh;
     
 }
 `;

@@ -14,7 +14,7 @@ const ScrollButton = styled.button`
   border: none;
   border-radius: 50%;
   background-color: ${(props) => props.theme.colors.text};
-  color: #fff;
+  color: ${(props) => props.theme.colors.background};
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
 
